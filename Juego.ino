@@ -35,7 +35,7 @@ uint8_t Npartidas()
 {
 	uint8_t intpartidas=0;
 	Serial.print("Ingrese el numero de partidas a jugar (1, 3 o 5)");
-	while(intpartidas=0)
+	while(intpartidas==0)
 	{
 		String partidas = readString();
 	  		if(partidas == "1")
