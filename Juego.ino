@@ -139,10 +139,10 @@ int resultado()
 	String usuario = preguntartipo();
 		uint8_t pjugadas=EEPROM.read(10)+EEPROM.read(11);
 
-	if (usuario!="piedra" && usuario!="papel" && usuario!="tijera" && usuario!="lagartija" && usuario!="spock")
+	if (usuario!="piedra" && usuario!="papel" && usuario!="tijera" && usuario!="lagartija" && usuario!="spock" && usuario!="estado")
 	 {
 	 	Serial.println("Entrada inválida");
-	 	return 0;
+	 	usuario = preguntartipo(); //el return que tenia hacia que se quedara en preguntartipo
 	 }
 
 	if(usuario=="estado")
